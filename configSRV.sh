@@ -1,7 +1,7 @@
 HOSTNAME="SRV-LIN-02"
 sudo hostnamectl set-hostname $HOSTNAME
 
-net_FILE="/etc/network/interfaces"11:29 AM 14.10.2022
+net_FILE="/etc/network/interfaces"
 sudo bash -c "cat <<EOM >$net_FILE
 
 # This file describes the network interfaces available on your system
@@ -20,4 +20,14 @@ address 10.10.10.12
 netmask 255.255.255.0
 gateway 10.10.10.2
 
-EOM" 
+EOM"
+
+dns_FILE="/etc/resolv.conf"
+sudo bash -c "cat <<EDM >$dns_FILE
+
+domain localdomain
+search localdomain
+nameserver 10.10.10.12
+nameserver 10.10.10.2
+
+EDM" 
