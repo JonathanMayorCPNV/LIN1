@@ -1,8 +1,8 @@
 HOSTNAME="SRV-LIN-02"
 sudo hostnamectl set-hostname $HOSTNAME
 
-sudo net_FILE="/etc/network/interfaces"
-cat <<EOM >$net_FILE
+net_FILE="/etc/network/interfaces"
+sudo cat <<EOM >$net_FILE
 
 # This file describes the network interfaces available on your system
 # and how to activate them. For more information, see interfaces(5).
