@@ -1,2 +1,2 @@
-HOSTNAME="SRV-LIN-02"
+HOSTNAME="LIN2-Client-Linux"
 sudo echo "$HOSTNAME" >> /etc/hostname
