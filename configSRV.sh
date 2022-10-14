@@ -1,7 +1,7 @@
 HOSTNAME="SRV-LIN-02"
 sudo hostnamectl set-hostname $HOSTNAME
 
-net_FILE="/etc/network/interfaces"
+net_FILE="/etc/network/interfaces"11:29 AM 14.10.2022
 sudo bash -c "cat <<EOM >$net_FILE
 
 # This file describes the network interfaces available on your system
@@ -16,7 +16,7 @@ iface lo inet loopback
 # The primary network interface
 auto ens32
 iface ens32 inet static
-address 10.10.10.12
+address 10.10.10.13
 netmask 255.255.255.0
 gateway 10.10.10.2
 
