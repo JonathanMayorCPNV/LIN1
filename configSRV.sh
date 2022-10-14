@@ -2,7 +2,7 @@ HOSTNAME="SRV-LIN-02"
 sudo hostnamectl set-hostname $HOSTNAME
 
 net_FILE="/etc/network/interfaces"
-sudo cat <<EOM >$net_FILE
+sudo bash -c "cat <<EOM >$net_FILE
 
 # This file describes the network interfaces available on your system
 # and how to activate them. For more information, see interfaces(5).
@@ -20,4 +20,4 @@ address 10.10.10.12
 netmask 255.255.255.0
 gateway 10.10.10.2
 
-EOM
+EOM" 
